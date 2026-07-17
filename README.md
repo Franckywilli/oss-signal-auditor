@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="public/logo.svg" width="72" height="72" alt="OSS Signal Auditor logo">
+</p>
+
 # OSS Signal Auditor
 
 ![Tests](https://github.com/Franckywilli/oss-signal-auditor/actions/workflows/test.yml/badge.svg)
