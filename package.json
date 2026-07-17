@@ -7,6 +7,7 @@
   "scripts": {
     "start": "node scripts/serve.js",
     "audit": "node src/cli.js",
+    "build:pages": "node scripts/build-pages.js",
     "test": "node --test",
     "check": "node --check public/audit-core.js && node --check public/app.js && node --check src/cli.js && node --check scripts/serve.js && node --test"
   },

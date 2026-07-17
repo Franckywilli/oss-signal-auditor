@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OSS Signal Auditor</title>
+    <meta
+      name="description"
+      content="Analyse un profil GitHub et priorise les actions pour construire un signal open source credible."
+    >
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div class="brand">
+          <img class="brand-mark" src="./logo.svg" width="40" height="40" alt="OSS Signal Auditor logo">
+          <div>
+            <strong>OSS Signal Auditor</strong>
+            <span>GitHub readiness scanner</span>
+          </div>
+        </div>
+        <div class="status" data-status data-tone="neutral">Pret.</div>
+      </header>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Open source portfolio</p>
+          <h1>Mesure ton signal GitHub avant de candidater.</h1>
+          <p>
+            Entre un profil GitHub, ajoute les metriques difficiles a detecter automatiquement,
+            puis transforme le resultat en plan d'action public.
+          </p>
+        </div>
+
+        <form class="audit-form" data-audit-form>
+          <div class="field-group">
+            <label for="username">Nom GitHub</label>
+            <input id="username" data-username autocomplete="off" placeholder="Franckywilli">
+          </div>
+
+          <div class="field-group">
+            <label for="token">Token GitHub optionnel</label>
+            <input id="token" data-token type="password" placeholder="Augmente la limite API">
+          </div>
+
+          <div class="metric-grid">
+            <div class="field-group">
+              <label for="dependentRepositories">Depots dependants</label>
+              <input id="dependentRepositories" data-metric="dependentRepositories" type="number" min="0" value="0">
+            </div>
+            <div class="field-group">
+              <label for="dependentPackages">Paquets dependants</label>
+              <input id="dependentPackages" data-metric="dependentPackages" type="number" min="0" value="0">
+            </div>
+            <div class="field-group">
+              <label for="monthlyDownloads">Telechargements mensuels</label>
+              <input id="monthlyDownloads" data-metric="monthlyDownloads" type="number" min="0" value="0">
+            </div>
+            <div class="field-group">
+              <label for="externalContributorsLast12Months">Contributeurs externes</label>
+              <input
+                id="externalContributorsLast12Months"
+                data-metric="externalContributorsLast12Months"
+                type="number"
+                min="0"
+                value="0"
+              >
+            </div>
+            <div class="field-group">
+              <label for="openSsfCriticality">OpenSSF criticality</label>
+              <input
+                id="openSsfCriticality"
+                data-metric="openSsfCriticality"
+                type="number"
+                min="0"
+                max="1"
+                step="0.01"
+                value="0"
+              >
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="button primary" type="submit">Analyser</button>
+            <button class="button secondary" type="button" data-sample>Exemple</button>
+          </div>
+        </form>
+      </section>
+
+      <div class="results" data-results hidden></div>
+    </main>
+
+    <script src="./audit-core.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
