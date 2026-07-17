@@ -1,0 +1,23 @@
+{
+  "name": "oss-signal-auditor",
+  "version": "0.1.0",
+  "description": "Audit a GitHub profile and turn open source readiness gaps into concrete next actions.",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node scripts/serve.js",
+    "audit": "node src/cli.js",
+    "test": "node --test",
+    "check": "node --check public/audit-core.js && node --check public/app.js && node --check src/cli.js && node --check scripts/serve.js && node --test"
+  },
+  "keywords": [
+    "github",
+    "open-source",
+    "portfolio",
+    "oss",
+    "maintainers"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}
