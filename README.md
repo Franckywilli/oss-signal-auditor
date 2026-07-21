@@ -5,6 +5,7 @@
 # OSS Signal Auditor
 
 ![Tests](https://github.com/Franckywilli/oss-signal-auditor/actions/workflows/test.yml/badge.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 OSS Signal Auditor is a small, dependency-free tool that audits a GitHub profile and turns open source readiness gaps into concrete next actions.
 
